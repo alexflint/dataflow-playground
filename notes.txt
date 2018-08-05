@@ -1,0 +1,51 @@
+# bigquery
+datasets
+tables
+ loading
+ schemas
+ repeated and nested columns
+views
+ tables that are created as the result of a query
+ read-only
+ store references back to original table
+ convenient tools exist to update them
+
+
+# dataflow
+read rows from a table (or a query on a table)
+write rows to a table (append / truncate / etc)
+
+# pubsub
+create topics
+create subscriptions separately (can be pull or push)
+ each subscription recieves each message exactly once
+ messages are buffered on subscriptions until they are delivered
+ if multiple clients connect to the same subscription then they each receive approx half of the messages
+then connect to a subscription
+
+# data studio
+part of "google analytics 360 suite" - targetted at marketers
+basic interface is like a presentation app - you can design things
+can pull in queries from bigquery (also other data sources including files on google storage, sheets, etc)
+seems like a nice way to produce good-looking reports
+UI is a bit slow
+
+# datalab
+seems to be jupyter as a service
+each user has their own instance
+sharing instances is explicitly not supported
+seems to be specifically focussed at data science
+it works by starting a jupyter notebook instance on GCE, then opening a proxy tunnel
+commands:
+ datalab create foo
+ datalab connect foo
+
+
+# jupyter
+bigquery has direct support for jupyter via
+ 1) exporting query results as pandas dataframes
+ 2) some special %%bigquery cell magic
+  https://cloud.google.com/bigquery/docs/visualize-jupyter
+
+# colaboratory
+
