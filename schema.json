@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Scenario",
+    "type": "string"
+  },
+  {
+    "name": "Split",
+    "type": "float"
+  },
+  {
+    "name": "Spurious",
+    "type": "float"
+  }
+]
